@@ -8,7 +8,7 @@
 
 
 ## 制作首页App组件
-1.完成Header区域，使用的是Mint-UI的Header组件
+1.完成Header区域，使用的是Mint-UI的Header组件 
 2.完成底部的Tabbar区域，使用的是MUI的Tabbar.html
  + 在之多 购物车小图标时，操作会相应对一些：
  + 先把 扩展图标的css样式拷贝到项目中
