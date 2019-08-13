@@ -39,7 +39,8 @@
 </script>
 <style lang="scss" scoped>
     .app-container{
-        padding-top:40px;
+        padding-top:40px;//避免导航栏遮挡
+        padding-bottom: 50px;//避免tabbar遮挡内容
         overflow-x: hidden; // 当有组件切换动效的时候，一瞬间，页面的宽度会变成 正常宽度的 2 倍，此时，需要隐藏超出屏幕宽度的区域
         
     }
@@ -57,4 +58,5 @@
     .v-leave-active {
         transition: all 0.5s ease;
     }
+    
 </style>
