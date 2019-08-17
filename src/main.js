@@ -28,13 +28,25 @@ import './lib/mui/css/mui.min.css'
 //导入icons样式
 import './lib/mui/css/icons-extra.css'
 
-//按需导入Mint-UI中的组件
-import{ Header,Swipe, SwipeItem, Button }from 'mint-ui'
+// //按需导入Mint-UI中的组件 ,由于 按需导入懒加载不能正常使用，所以改用导入全部
+// import{ Header,Swipe, SwipeItem, Button, Lazyload }from 'mint-ui'
 
-Vue.component(Header.name,Header)
-Vue.component(Swipe.name, Swipe)
-Vue.component(SwipeItem.name, SwipeItem)
-Vue.component(Button.name, Button)
+// Vue.component(Header.name,Header)
+// Vue.component(Swipe.name, Swipe)
+// Vue.component(SwipeItem.name, SwipeItem)
+// Vue.component(Button.name, Button)
+// Vue.use(Lazyload)
+
+// 全局配置MintUI组件库
+import MintUI from 'mint-ui'
+// 导入 Mint-UI的样式表
+import 'mint-ui/lib/style.css'
+// 使用 Vue.use 来批量注册 MintUI 的组件
+Vue.use(MintUI)
+
+// 安装 图片预览插件
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
 
 
 //1.3导入自己的router.js路由模块
