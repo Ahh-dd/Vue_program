@@ -53,7 +53,7 @@ export default{
 					          this.photoinfo = result.body.message[0]
                 }else{
                     //失败
-                    Toast('加载导航失败')
+                    Toast('加载图片失败')
                 } 
             })
         },

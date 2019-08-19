@@ -22,6 +22,8 @@
 //导入评论子组件
 import Comment from '../subcomponents/Comment.vue'
 
+//按需导入Toast
+import {Toast} from 'mint-ui'
 
 export default{
     data() {
