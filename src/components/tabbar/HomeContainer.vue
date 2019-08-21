@@ -17,15 +17,18 @@
                         <router-link to="/home/goodslist">
 		                    <img src="../../images/menu3.png">
 		                    <div class="mui-media-body">商品购买</div></router-link></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                        <router-link to="/home/feedback">
 		                    <img src="../../images/menu4.png">
-		                    <div class="mui-media-body">留言反馈</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <div class="mui-media-body">留言反馈</div></router-link></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                        <a href="#" @click.prevent="video">
 		                    <img src="../../images/menu5.png">
 		                    <div class="mui-media-body">视频专区</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                        <router-link to="/member">
 		                    <img src="../../images/menu6.png">
-		                    <div class="mui-media-body">联系我们</div></a></li>
+		                    <div class="mui-media-body">联系我们</div></router-link></li>
 		        </ul> 
     </div>
 
@@ -57,6 +60,9 @@ export default{
                 }
                 
             })
+        },
+        video(){
+            Toast('暂未开放')
         }
     },
     components:{  //子组件必须在父组件中注册才能使用

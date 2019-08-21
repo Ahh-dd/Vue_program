@@ -1,6 +1,6 @@
 <template>
     <div class="cmt-container">
-        <h3>发表评论</h3>
+        <h3>评论专区</h3>
         <hr>
         <textarea placeholder="请输入要吐槽的内容（最多吐槽120字）" maxlength="120" v-model="msg"></textarea>
         <mt-button type="primary" size="large" @click="postComment">发表评论</mt-button>
@@ -90,8 +90,17 @@ export default{
 </script>
 <style lang="scss" scoped>
 .cmt-container{
+    margin-top: 20px;
     h3{
-        font-size: 18px;
+        font-size: 20px;
+        text-align: center;
+        
+    }
+    hr{
+      height: 3px;
+      width: 150px;
+      background-color: red;
+      border: none;
     }
     textarea{
         font-size: 14px;
