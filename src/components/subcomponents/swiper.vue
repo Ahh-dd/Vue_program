@@ -4,8 +4,8 @@
         <!-- 将来谁使用此组件，谁为他传递 lunbotuList-->
         <!-- 此时，lunbotuList应该是父组件向子组件传值 -->
         <mt-swipe :auto="4000">
-            <mt-swipe-item v-for="item in lunbotuList" :key="item.id">
-                <img :src="item.img" alt="" :class="{'full': isfull}">
+            <mt-swipe-item v-for="item in lunbotuList" :key="item.url">
+                <img :src="item.url" alt="" :class="{'full': isfull}">
             </mt-swipe-item>
         </mt-swipe>
     </div>

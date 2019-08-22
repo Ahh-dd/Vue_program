@@ -79,7 +79,7 @@ export default {
                 if (result.body.status === 0) {
                     // 先循环轮播图数组的每一项，为 item 添加 img 属性，因为 轮播图 组件中，只认识 item.img， 不认识 item.src
                     result.body.message.forEach(item => {
-                        item.img = item.src;
+                        item.url = item.src;
                     });
                     this.lunbotu = result.body.message;
                 } else {

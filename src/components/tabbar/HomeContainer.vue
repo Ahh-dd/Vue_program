@@ -50,14 +50,19 @@ export default{
     },
     methods: {
         getLunbotu(){
-            this.$http.get('api/getlunbo').then(result =>{
-                if(result.body.status ===0){
+            this.$http.jsonp('https://api.asilu.com/bg/').then(result =>{
+                if(result.status ===200){
                     //成功了
-                    this.lunbotuList = result.body.message
-                }else{
-                    //失败
-                    Toast('加载轮播图失败')
-                }  
+                    this.lunbotuList = result.body.images
+                    console.log(this.lunbotuList);
+                    
+                }
+                //else{
+                //     //失败
+                //     Toast('加载轮播图失败')
+                // }  
+                console.log(result);
+                
             })
         },
         
