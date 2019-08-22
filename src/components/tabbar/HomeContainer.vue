@@ -53,15 +53,13 @@ export default{
             this.$http.jsonp('https://api.asilu.com/bg/').then(result =>{
                 if(result.status ===200){
                     //成功了
-                    this.lunbotuList = result.body.images
-                    console.log(this.lunbotuList);
-                    
+                    this.lunbotuList = result.body.images 
                 }
-                //else{
-                //     //失败
-                //     Toast('加载轮播图失败')
-                // }  
-                console.log(result);
+                else{
+                    //失败
+                    Toast('加载轮播图失败')
+                }  
+                // console.log(result);
                 
             })
         },

@@ -34,7 +34,6 @@ export default{
                 if(result.status ===200){
                     //成功了
                     this.list = result.body.data
-                    console.log(this.list);
                 }
                 else{
                     //失败
