@@ -22,9 +22,9 @@
 		                    <img src="../../images/menu4.png">
 		                    <div class="mui-media-body">留言反馈</div></router-link></li>
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-                        <a href="#" @click.prevent="video">
+                        <router-link to="/home/history">
 		                    <img src="../../images/menu5.png">
-		                    <div class="mui-media-body">视频专区</div></a></li>
+		                    <div class="mui-media-body">那年今日</div></router-link></li>
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
                         <router-link to="/member">
 		                    <img src="../../images/menu6.png">
@@ -42,7 +42,7 @@ import swiper from '../subcomponents/swiper.vue'
 export default{
     data() {
         return {
-            lunbotuList:[]//保存轮播图的数组
+            lunbotuList:[],//保存轮播图的数组
         }
     },
     created(){
@@ -57,13 +57,10 @@ export default{
                 }else{
                     //失败
                     Toast('加载轮播图失败')
-                }
-                
+                }  
             })
         },
-        video(){
-            Toast('暂未开放')
-        }
+        
     },
     components:{  //子组件必须在父组件中注册才能使用
         swiper    //注册轮播图组件，可以给他起名字 'lunbotu':swiper  也可以直接使用

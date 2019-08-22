@@ -6,16 +6,19 @@ import VueRouter from 'vue-router'
 //1.2安装路由
 Vue.use(VueRouter)
 
+//每次刚进入网站，肯定会调用main.js 在刚调用的时候，先从本地存储中把购物车的数据读出来
+var car = JSON.parse(localStorage.getItem('car') || '[]')
+
 //注册vuex
 import Vuex from'vuex'
 Vue.use(Vuex)
 
-//每次刚进入网站，肯定会调用main.js 在刚调用的时候，先从本地存储中把购物车的数据读出来
-var car = JSON.parse(localStorage.getItem('car' || '[]'))
+
+
 
 var store = new Vuex.Store({
   state:{  //this.$store.state.***
-    car: car, //将购物车中商品的数据用数据存储,在car数组中，存储一些商品的对象，可以暂时将商品对象，设计成以下这样  
+    car: car //将购物车中商品的数据用数据存储,在car数组中，存储一些商品的对象，可以暂时将商品对象，设计成以下这样  
             //{id:商品的id, count:商品的数量, price:商品单价,selected:false}
   },
   mutations:{  //this.$store.commit('方法名称'，'按需传递唯一的参数')
@@ -83,7 +86,7 @@ var store = new Vuex.Store({
       getAllCount(state){
         var c=0;
         state.car.forEach(item=>{
-          c +=item.count
+          c += item.count
         })
         return c
       },
@@ -123,6 +126,9 @@ var store = new Vuex.Store({
 import moment from 'moment'
 //定义全局过滤器
 Vue.filter('dateFormat',function(dataStr,pattern = "YYYY-MM-DD HH:mm:ss"){
+  return moment(dataStr).format(pattern)
+})
+Vue.filter('dateFormat1',function(dataStr,pattern = "YYYY-MM-DD"){
   return moment(dataStr).format(pattern)
 })
 

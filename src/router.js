@@ -15,6 +15,7 @@ import GoodsInfo from './components/goods/GoodsInfo.vue'
 import GoodsDesc from './components/goods/GoodsDesc.vue'
 import GoodsComment from './components/goods/GoodsComment.vue'
 import feedback from './components/subcomponents/feedback.vue'
+import history from './components/subcomponents/history.vue'
 
 //3.创建路有对象
 var router = new VueRouter({
@@ -33,7 +34,7 @@ var router = new VueRouter({
       { path:'/home/goodsdesc/:id',component:GoodsDesc,name:"goodsdesc"},
       { path:'/home/goodscomment/:id',component:GoodsComment,name:"goodscomment"},
       { path:'/home/feedback',component:feedback },
-
+      { path:'/home/history',component:history },
       ],
     linkActiveClass:'mui-active' //覆盖默认的高亮的类，默认的类叫做router-link-active
     })

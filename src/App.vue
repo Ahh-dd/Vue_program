@@ -115,7 +115,7 @@ export default{
     text-overflow: ellipsis;
     }
     .mint-header {
-    z-index: 2;
+    z-index: 99;
      box-shadow: 0 1px 6px #ccc;
     }
     .mui-active {
